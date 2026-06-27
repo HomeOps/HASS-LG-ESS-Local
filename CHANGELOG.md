@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/HomeOps/HASS-LG-ESS-Local/compare/v0.1.0...v0.1.1) (2026-06-27)
+
+
+### Bug Fixes
+
+* import DeviceInfo from device_registry, not a nonexistent module ([6850942](https://github.com/HomeOps/HASS-LG-ESS-Local/commit/6850942434c80d49dd7092dee1c9de6696625121))
+* read HA version from homeassistant.const in docker smoke test ([cc96930](https://github.com/HomeOps/HASS-LG-ESS-Local/commit/cc9693073a05147a21eaa6335f16cefc87d49471))
+
 ## 0.1.0 (2026-06-27)
 
 
