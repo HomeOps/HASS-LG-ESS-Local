@@ -68,6 +68,28 @@ A single **LG ESS Battery** device with:
 - If your unit *does* expose the `/v1` HTTPS API on the LAN, consider
   [`dkarv/ha-lg-ess`](https://github.com/dkarv/ha-lg-ess) for the richer official API.
 
+## Development / Testing
+
+Two layers of tests, both run in CI (`.github/workflows/tests.yml`):
+
+**Unit tests** (HA test harness) — config flow, coordinator parsing, and full
+entry → device/sensor setup, using `pytest-homeassistant-custom-component`:
+
+```bash
+pip install -r requirements_test.txt
+pytest
+```
+
+**hass/core docker smoke test** — loads the integration inside the official
+Home Assistant container to catch real-HA import/manifest errors that hassfest
+misses:
+
+```bash
+bash tests/docker/smoke.sh
+# or pin a version:
+HA_IMAGE=ghcr.io/home-assistant/home-assistant:stable bash tests/docker/smoke.sh
+```
+
 ## License
 
 [MIT](LICENSE) © Oscar Calvo / HomeOps

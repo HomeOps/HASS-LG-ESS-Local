@@ -1,0 +1,4 @@
+# Test dependencies. pytest-homeassistant-custom-component brings in a real
+# Home Assistant build plus the pytest/pytest-asyncio harness and the
+# aioclient_mock / enable_custom_integrations fixtures used by the tests.
+pytest-homeassistant-custom-component

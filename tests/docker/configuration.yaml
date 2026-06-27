@@ -1,0 +1,13 @@
+# Minimal Home Assistant config for the check_config smoke test.
+# The integration itself is config-entry based (UI), so it is not configured
+# here; the smoke test loads its modules separately.
+homeassistant:
+  name: Smoke Test
+  latitude: 0
+  longitude: 0
+  elevation: 0
+  unit_system: metric
+  time_zone: UTC
+
+logger:
+  default: warning
