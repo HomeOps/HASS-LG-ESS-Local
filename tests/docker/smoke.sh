@@ -24,7 +24,7 @@ docker run --rm \
   python -c '
 import importlib
 
-import homeassistant
+from homeassistant.const import __version__ as ha_version
 
 MODULES = [
     "__init__",
@@ -38,7 +38,7 @@ MODULES = [
 for name in MODULES:
     importlib.import_module(f"custom_components.lg_ess_local.{name}")
     print(f"  ok  custom_components.lg_ess_local.{name}")
-print(f"All modules import cleanly under Home Assistant {homeassistant.__version__}")
+print(f"All modules import cleanly under Home Assistant {ha_version}")
 '
 
 echo "==> Validating Home Assistant configuration with the integration present"
